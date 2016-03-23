@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="demo_dbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="demo_dbModelStoreContainer">
+          <EntitySet Name="Tax_Enter" EntityType="demo_dbModel.Store.Tax_Enter" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Tax_Enter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Tax_name" Type="varchar" MaxLength="100" />
+          <Property Name="Tax_Percentage" Type="varchar" MaxLength="100" />
+          <Property Name="gender" Type="varchar" MaxLength="100" />
+          <Property Name="date" Type="varchar" MaxLength="100" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="demo_dbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="demo_dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tax_Enter" EntityType="demo_dbModel.Tax_Enter" />
+        </EntityContainer>
+        <EntityType Name="Tax_Enter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Tax_name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Tax_Percentage" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="gender" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="date" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="demo_dbModelStoreContainer" CdmEntityContainer="demo_dbEntities">
+          <EntitySetMapping Name="Tax_Enter">
+            <EntityTypeMapping TypeName="demo_dbModel.Tax_Enter">
+              <MappingFragment StoreEntitySet="Tax_Enter">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Tax_name" ColumnName="Tax_name" />
+                <ScalarProperty Name="Tax_Percentage" ColumnName="Tax_Percentage" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="date" ColumnName="date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="demo_dbModel.Tax_Enter" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9802864583333331" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

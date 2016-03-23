@@ -1,0 +1,70 @@
+﻿@model IEnumerable<MvcApplication1.DB.Tax_Enter>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+ 
+<style>
+    table, td, th
+    {
+        border: 1px solid green;
+        border-collapse: collapse;
+        width: 30%;
+        
+    }
+   
+    th
+    {
+        border: 1px solid black;
+        background-color: #A7C942;
+        color: white;
+        
+    }
+    tr:hover {background:#EAF2D3;}
+ 
+</style>
+
+</head>
+<body>
+    <div>
+    @{
+        var grid = new WebGrid(
+            Model, rowsPerPage: 10,
+           
+            defaultSort: "Id",
+            columnNames: new[] { "Id", "Tax_name", "Tax_Percentage", "gender", "date", "Edit", "Delete" }
+            );
+    }
+    @using (@Html.BeginForm("Index", "webgrid"))
+    {
+    @grid.GetHtml(
+    fillEmptyRows: false,
+
+    mode: WebGridPagerModes.All,
+    columns: grid.Columns
+    (
+    grid.Column("Id", header: "Id"),
+     grid.Column("Tax_name", header: "Tax_name"),
+      grid.Column("Tax_Percentage", header: "Tax_Percentage"),
+           grid.Column("gender", header: "gender"),
+           grid.Column("date", header: "date", format: (item) => string.Format("{0:dd-mm-yyyy}", item.date)),
+
+                                                                                                                grid.Column("Edit", header: "Edit", format: (item) => Html.ActionLink("Edit", "edt", new { ID = item.Id, Tax_name = item.Tax_name })),
+         // grid.Column("Edit", header: "Edit", format: (item) => Html.ActionLink("Delete", "ActionName2", new { param1 = "hello", param2 = "bye" })),
+          
+          
+         // grid.Column(header: "Actions", format: (item) =>  new HtmlString(  Html.ActionLink("Edit" , "edt", new { id = item.id } ).ToString() +  Html.ActionLink("Delete", "Delete", new { id = item.id } ) .ToString()  ) ,
+                //  grid.Column(format: @<text>@Html.ActionLink("Edit", "ActionName", new { param1 = "hello", param2 = "bye" })</text>)
+                      //  grid.Column(format: (item) => Html.ActionLink("Edit", "ActionName", new { param1 = "hello", param2 = "bye" })) 
+                 grid.Column(header: "Action",format:@<text> <a href="/Webgrid/edt/2" id="Edit_" class="edit">Edit</a></text>)
+
+                  ))
+    } 
+    @Html.ActionLink("create", "edt","editsp");
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="demo_dbModelStoreContainer" CdmEntityContainer="demo_dbEntities">
+    <EntitySetMapping Name="Tax_Enter">
+      <EntityTypeMapping TypeName="demo_dbModel.Tax_Enter">
+        <MappingFragment StoreEntitySet="Tax_Enter">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tax_name" ColumnName="Tax_name" />
+          <ScalarProperty Name="Tax_Percentage" ColumnName="Tax_Percentage" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

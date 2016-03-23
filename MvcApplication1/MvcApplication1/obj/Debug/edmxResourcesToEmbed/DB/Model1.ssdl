@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="demo_dbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="demo_dbModelStoreContainer">
+    <EntitySet Name="Tax_Enter" EntityType="demo_dbModel.Store.Tax_Enter" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Tax_Enter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Tax_name" Type="varchar" MaxLength="100" />
+    <Property Name="Tax_Percentage" Type="varchar" MaxLength="100" />
+    <Property Name="gender" Type="varchar" MaxLength="100" />
+    <Property Name="date" Type="varchar" MaxLength="100" />
+  </EntityType>
+</Schema>
