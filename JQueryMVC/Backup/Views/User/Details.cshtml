@@ -1,0 +1,68 @@
+﻿@model JQueryMVC.Models.User
+@{
+    ViewBag.Title = "Details";
+}
+<h2>
+    Details</h2>
+<fieldset>
+    <legend>User</legend>
+    <div class="display-label">
+        Name</div>
+    <div class="display-field">
+        @Model.Name
+    </div>
+    <div class="display-label">
+        Address</div>
+    <div class="display-field">
+        @Model.Address
+    </div>
+    <div class="display-label">
+        Town</div>
+    <div class="display-field">
+        @Model.Town
+    </div>
+    <div class="display-label">
+        County</div>
+    <div class="display-field">
+        @Model.County
+    </div>
+    <div class="display-label">
+        Country</div>
+    <div class="display-field">
+        @Model.Country
+    </div>
+    <div class="display-label">
+        Email</div>
+    <div class="display-field">
+        @Model.Email
+    </div>
+    <div class="display-label">
+        DoB</div>
+    <div class="display-field">
+        @Model.DoB
+    </div>
+    <div class="display-label">
+        IsActive</div>
+    <div class="display-field">
+        @Model.IsActive
+    </div>
+    <div class="display-label">
+        UserName</div>
+    <div class="display-field">
+        @Model.UserName
+    </div>
+    <div class="display-label">
+        Password</div>
+    <div class="display-field">
+        @Model.Password
+    </div>
+    <div class="display-label">
+        Rating</div>
+    <div class="display-field">
+        @Model.Rating
+    </div>
+</fieldset>
+<p>
+    <a href="/User/Index">Back to list</a> | <a href="/User/Edit/@Model.UserID">Edit</a>
+</p>
+@Html.Partial("_SearchUsers")

@@ -1,0 +1,10 @@
+D:\office doc\JQueryMVC\bin\JQueryMVC.dll
+D:\office doc\JQueryMVC\bin\JQueryMVC.pdb
+D:\office doc\JQueryMVC\obj\Debug\JQueryMVC.csprojResolveAssemblyReference.cache
+D:\office doc\JQueryMVC\obj\Debug\JQueryMVC.dll
+D:\office doc\JQueryMVC\obj\Debug\JQueryMVC.pdb
+D:\Dropboxdata\office doc\JQueryMVC\bin\JQueryMVC.dll
+D:\Dropboxdata\office doc\JQueryMVC\bin\JQueryMVC.pdb
+D:\Dropboxdata\office doc\JQueryMVC\obj\Debug\JQueryMVC.csprojResolveAssemblyReference.cache
+D:\Dropboxdata\office doc\JQueryMVC\obj\Debug\JQueryMVC.dll
+D:\Dropboxdata\office doc\JQueryMVC\obj\Debug\JQueryMVC.pdb

@@ -1,0 +1,22 @@
+﻿
+
+<form method="post" action="/User/Search">
+    <fieldset>
+        <legend>Search for users</legend>
+        <div class="editor-label">
+            <label for="active">Is Active</label>
+        </div>
+        <div class="editor-field">
+            Yes<input type="radio" name="active" id="active" value="true" />
+            No<input type="radio" name="active" id="active" value="false" checked="checked" />
+        </div>
+
+        <div class="editor-label">
+            <label for="rating">Minimal Rating</label>
+        </div>
+                <div class="editor-field">
+            <input type="text" name="rating" id="rating" value="0" />
+        </div>
+        <input type="submit" value="Search" />
+    </fieldset>
+ </form>
